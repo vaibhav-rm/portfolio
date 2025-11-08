@@ -1,10 +1,11 @@
 {
-  "name": "my-v0-project",
+  "name": "portflio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postinstall": "npm install --legacy-peer-deps",
     "start": "next start",
     "lint": "eslint ."
   },
