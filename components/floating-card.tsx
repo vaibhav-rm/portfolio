@@ -25,9 +25,6 @@ export default function FloatingCard({
   return (
     <motion.div
       draggable
-      onDragStart={(e) => {
-        e.dataTransfer?.setDragImage(new Image(), 0, 0)
-      }}
       drag
       dragElastic={0.2}
       dragMomentum={false}

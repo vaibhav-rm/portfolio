@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants, easeOut } from "framer-motion"
 import { ArrowRight, Code, Zap, Globe, PenTool, Layers } from "lucide-react"
 import Link from "next/link"
 import FloatingCard from "./floating-card"
@@ -17,14 +17,15 @@ export default function Hero() {
     },
   }
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  }
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: easeOut },
+  },
+}
+
 
   const techBadges = [
     { icon: Code, label: "Full Stack", color: "from-purple-500 to-pink-500" },

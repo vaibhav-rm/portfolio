@@ -7,11 +7,11 @@ import { ArrowLeft, Github } from "lucide-react"
 
 // Define the Project type if it's not already defined elsewhere and imported
 interface Project {
-  id: string
+  id: number
   slug: string
   title: string
   shortDescription: string
-  year: string
+  year: number
   tags: string[]
   github: string
   color: string
