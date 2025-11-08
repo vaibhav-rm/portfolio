@@ -43,7 +43,7 @@ export default function ContactSection() {
     {
       name: "Email",
       icon: Mail,
-      href: "mailto:vaibhav@example.com",
+      href: "mailto:rathodvaibhav401@gmail.com",
     },
     {
       name: "GitHub",
@@ -53,12 +53,7 @@ export default function ContactSection() {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      href: "https://linkedin.com/in/vaibhav-rm",
-    },
-    {
-      name: "Twitter",
-      icon: Twitter,
-      href: "https://twitter.com/vaibhav_rm",
+      href: "https://www.linkedin.com/in/vaibhav-rathod-1620a1233",
     },
   ]
 

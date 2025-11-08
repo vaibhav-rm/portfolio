@@ -43,7 +43,7 @@ export default function AboutSection() {
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
             With over 2 years of experience in full-stack development, I've had the privilege of working with innovative
-            companies and talented teams to create digital products that matter. My passion lies at the intersection of
+            and talented teams to create digital products that matter. My passion lies at the intersection of
             beautiful design and robust engineering.
           </p>
         </motion.div>
