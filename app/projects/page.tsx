@@ -102,11 +102,13 @@ export default function ProjectsPage() {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {filteredProjects.map((project) => (
-              <Link key={project.id} href={`/projects/${project.slug}`}>
-                <motion.div
-                  variants={itemVariants}
-                  className="group glass-card overflow-hidden h-full hover:shadow-lg smooth-transition cursor-pointer"
-                >
+              <motion.div
+                key={project.id}
+                variants={itemVariants}
+                className="group glass-card overflow-hidden h-full hover:shadow-lg smooth-transition cursor-pointer"
+              >
+                {/* Main project link */}
+                <Link href={`/projects/${project.slug}`} className="block">
                   {/* Project Image */}
                   <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${project.color}`}>
                     <img
@@ -140,23 +142,22 @@ export default function ProjectsPage() {
                         </span>
                       )}
                     </div>
-
-                    {/* GitHub Link */}
-                    <div className="flex gap-2 pt-4">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-foreground/10 hover:bg-foreground/20 smooth-transition text-sm font-medium"
-                      >
-                        <Github size={16} />
-                        Code
-                      </a>
-                    </div>
                   </div>
-                </motion.div>
-              </Link>
+                </Link>
+
+                {/* GitHub Link - outside main Link to avoid nested <a> */}
+                <div className="flex gap-2 p-6 pt-0">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-foreground/10 hover:bg-foreground/20 smooth-transition text-sm font-medium"
+                  >
+                    <Github size={16} />
+                    Code
+                  </a>
+                </div>
+              </motion.div>
             ))}
           </motion.div>
 

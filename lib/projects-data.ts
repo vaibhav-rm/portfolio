@@ -89,6 +89,96 @@ export const projectsData = [
     results: "Hosted 500+ blog posts from 100+ users, achieving over 10k monthly visits.",
     color: "from-orange-500/20 to-red-500/20",
   },
+  {
+    id: 4,
+    slug: "library-management-system",
+    title: "Library Management System",
+    shortDescription: "A digital library solution designed for engineering colleges to manage book catalogs and student borrowing efficiently.",
+    fullDescription:
+      "A full-stack Library Management System (LMS) built for colleges, enabling administrators and students to manage, borrow, and track books online. The system offers separate dashboards for librarians and students, along with MongoDB integration for reliable data storage.",
+    tags: ["React", "Node.js", "MongoDB", "Express"],
+    image: "/images/lms.png",
+    github: "https://github.com/vaibhav-rm/Library-Management-System",
+    year: 2023,
+    problem:
+      "Manual book tracking led to inefficiencies and errors in managing academic library resources for engineering colleges.",
+    solution:
+      "Built a web-based LMS with separate admin and student panels, integrated MongoDB for storage, and provided real-time book tracking and borrowing features.",
+    keyFeatures: [
+      "Admin and student dashboards",
+      "Real-time book inventory updates",
+      "Search and filter books",
+      "Responsive UI with Tailwind CSS",
+      "Secure authentication system",
+    ],
+    technologies: {
+      backend: ["Node.js", "Express", "MongoDB"],
+      frontend: ["React", "Tailwind CSS"],
+      other: ["JWT", "REST API", "Mongoose"],
+    },
+    results: "Streamlined operations for academic institutions with 1000+ managed books and 99% accuracy.",
+    color: "from-green-500/20 to-emerald-500/20",
+  },
+  {
+    id: 5,
+    slug: "portfolio",
+    title: "Developer Portfolio",
+    shortDescription: "A dynamic, visually rich portfolio showcasing projects, blogs, and achievements using Next.js and Framer Motion.",
+    fullDescription:
+      "A personal developer portfolio site built with Next.js 16 and Tailwind CSS, featuring smooth animations powered by Framer Motion and responsive design optimized for all devices.",
+    tags: ["Next.js", "Tailwind", "Framer Motion"],
+    image: "/images/portfolio.png",
+    github: "https://github.com/vaibhav-rm/portfolio",
+    year: 2025,
+    problem:
+      "Developers often struggle to present their work in an interactive and aesthetically appealing manner online.",
+    solution:
+      "Created a visually engaging and fully responsive portfolio that displays projects, blogs, and contact information, deployed via Cloudflare Pages for high performance.",
+    keyFeatures: [
+      "Animated transitions with Framer Motion",
+      "Dynamic project routing with Next.js",
+      "Markdown-based blog support",
+      "SEO-optimized static export",
+      "Deployed on Cloudflare Pages",
+    ],
+    technologies: {
+      backend: ["Static (Next.js Export)"],
+      frontend: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      other: ["Cloudflare Pages", "TypeScript", "Git"],
+    },
+    results: "Achieved Lighthouse score of 99+ across performance, accessibility, and SEO.",
+    color: "from-purple-500/20 to-pink-500/20",
+  },
+   {
+    id: 6,
+    slug: "java-rpg",
+    title: "Java RPG",
+    shortDescription: "A terminal-based RPG game built with core Java concepts and object-oriented design.",
+    fullDescription:
+      "A fully interactive, text-based role-playing game developed in Java. Players can explore, battle, and progress through levels, designed to demonstrate OOP concepts such as inheritance, polymorphism, and encapsulation.",
+    tags: ["Java", "OOP", "Game Development"],
+    image: "/images/java-rpg.png",
+    github: "https://github.com/vaibhav-rm/Java-rpg",
+    year: 2023,
+    problem:
+      "Wanted to learn advanced Java concepts beyond CRUD applications by building an engaging project.",
+    solution:
+      "Designed a modular RPG engine using OOP principles, encapsulating player stats, enemies, and battle logic into reusable Java classes.",
+    keyFeatures: [
+      "Turn-based battle mechanics",
+      "Inventory and XP system",
+      "Modular character design",
+      "Expandable storyline engine",
+      "Lightweight and fast",
+    ],
+    technologies: {
+      backend: ["Core Java"],
+      frontend: ["Console UI"],
+      other: ["OOP", "Collections Framework"],
+    },
+    results: "Used as a teaching demo for 2nd-year Java students to understand OOP in practice.",
+    color: "from-yellow-500/20 to-amber-500/20",
+  },
 ]
 
 export type ProjectData = (typeof projectsData)[0]
