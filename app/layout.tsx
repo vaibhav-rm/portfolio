@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   title: "Vaibhav Rathod - Full Stack Developer",
   description:
     "I build things that scale — simple, fast, and delightful. Full-stack developer specializing in React, Spring Boot, and modern web technologies.",
-  generator: "v0.app",
   icons: {
     icon: [
       {

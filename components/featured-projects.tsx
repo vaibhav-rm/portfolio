@@ -8,30 +8,36 @@ export default function FeaturedProjects() {
   const projects = [
     {
       title: "Ollama VScode Extension",
-      description: "An extension as frontend in vscode for the ollama api.",
+      description: "An extension as frontend in vscode for the Ollama API.",
       tags: ["TypeScript", "VScode"],
-      color: "from-purple-500 to-pink-500",
       stats: { users: "1.2k+", uptime: "99.9%" },
+      image: "/images/ollama-vscode.png",
+      link: "https://marketplace.visualstudio.com/items?itemName=Vaibhavrathod.ollama-vscode-chat",
     },
     {
       title: "Formwise",
-      description: "A google forms alternative made for modern form / survey needs includes power analytics tools.",
+      description:
+        "A Google Forms alternative made for modern form / survey needs, includes power analytics tools.",
       tags: ["React", "Firebase"],
-      color: "from-cyan-500 to-blue-500",
-      stats: { datapoints: "1M+", latency: "<100ms", users: "5k+" },
+      stats: { datapoints: "1M+", latency: "<100ms" },
+      image: "/images/formwise.png",
+      link: "https://formwise.pages.dev/",
     },
     {
       title: "Vaibhav Dev Notes",
-      description: "A bloging website where people can even create their account and post their own blogs.",
+      description:
+        "A blogging website where people can create their accounts and post their own blogs.",
       tags: ["React", "Appwrite"],
-      color: "from-orange-500 to-red-500",
-      stats: { documents: "100k+", apiCalls: "500k+", accuracy: "95%" },
+      stats: { documents: "100k+", apiCalls: "500k" },
+      image: "/images/vaibhav-dev-notes.png",
+      link: "https://vaibhavnotes.pages.dev/",
     },
   ]
 
   return (
     <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,6 +63,7 @@ export default function FeaturedProjects() {
           </p>
         </motion.div>
 
+        {/* Project Cards */}
         <div className="space-y-8">
           {projects.map((project, index) => (
             <motion.div
@@ -69,6 +76,7 @@ export default function FeaturedProjects() {
               className="glass-card overflow-hidden group"
             >
               <div className="grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
+                {/* Text Section */}
                 <div className="flex flex-col justify-between">
                   <div>
                     <h3 className="text-3xl font-bold text-white mb-4">{project.title}</h3>
@@ -104,7 +112,9 @@ export default function FeaturedProjects() {
                     {/* CTA */}
                     <motion.div whileHover={{ x: 5 }}>
                       <Link
-                        href="#"
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
                       >
                         Explore Project
@@ -114,20 +124,26 @@ export default function FeaturedProjects() {
                   </div>
                 </div>
 
-                {/* Visual */}
-                <motion.div
-                  className={`relative rounded-xl overflow-hidden h-72 bg-gradient-to-br ${project.color} opacity-15`}
-                  whileHover={{ opacity: 0.25 }}
-                >
+                {/* Visual Section (Replaced gradient with image) */}
+                <Link href={project.link} target="_blank" rel="noopener noreferrer">
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"
-                    initial={{ opacity: 0.5 }}
-                    whileHover={{ opacity: 0.3 }}
-                  />
-                  <motion.div className="absolute inset-0 flex items-center justify-center" whileHover={{ scale: 1.1 }}>
-                    <ExternalLink size={48} className="text-white/20" />
+                    className="relative rounded-xl overflow-hidden h-72 group"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent opacity-70 group-hover:opacity-50 transition-opacity" />
+                    <motion.div
+                      className="absolute inset-0 flex items-center justify-center"
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      <ExternalLink size={48} className="text-white/60 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </motion.div>
                   </motion.div>
-                </motion.div>
+                </Link>
               </div>
             </motion.div>
           ))}

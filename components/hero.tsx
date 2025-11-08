@@ -177,9 +177,9 @@ export default function Hero() {
             {/* Stats */}
             <motion.div variants={itemVariants} className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-700/50">
               {[
-                { value: "50+", label: "Projects" },
+                { value: "10+", label: "Projects" },
                 { value: "15+", label: "Tech Stack" },
-                { value: "3+", label: "Years Exp" },
+                { value: "2+", label: "Years Exp" },
               ].map((stat) => (
                 <div key={stat.label} className="space-y-2">
                   <motion.p

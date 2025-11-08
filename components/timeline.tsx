@@ -5,8 +5,8 @@ import { Calendar, Code, Rocket, BookOpen, CheckCircle2 } from "lucide-react"
 
 const timelineEvents = [
   {
-    year: "2023",
-    title: "Diploma CSE - 5th Semester",
+    year: "2022",
+    title: "Diploma CSE - 1st Semester",
     description: "Pursuing diploma in Computer Science Engineering with focus on full-stack development",
     icon: BookOpen,
     color: "from-blue-500 to-cyan-500",
@@ -20,17 +20,24 @@ const timelineEvents = [
   },
   {
     year: "2024",
+    title: "Dev Notes Blog Launch",
+    description: "Launched personal technical blog using Next.js to share development insights",
+    icon: CheckCircle2,
+    color: "from-green-500 to-emerald-500",
+  },
+    {
+    year: "2024",
     title: "FormWise Project",
     description: "Created intelligent form builder with React and Tailwind CSS for dynamic form generation",
     icon: Rocket,
     color: "from-orange-500 to-red-500",
   },
-  {
-    year: "2024",
-    title: "Dev Notes Blog Launch",
-    description: "Launched personal technical blog using Next.js to share development insights",
-    icon: CheckCircle2,
-    color: "from-green-500 to-emerald-500",
+    {
+    year: "2025",
+    title: "RV College of engineering CSE, 3rd sem",
+    description: "Created intelligent form builder with React and Tailwind CSS for dynamic form generation",
+    icon: BookOpen,
+    color: "from-blue-500 to-red-500",
   },
 ]
 

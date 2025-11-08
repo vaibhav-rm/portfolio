@@ -10,11 +10,10 @@ import { useState } from "react"
 interface SkillCardProps {
   icon: LucideIcon
   name: string
-  level: number
   index: number
 }
 
-export function SkillCard({ icon: IconComponent, name, level, index }: SkillCardProps) {
+export function SkillCard({ icon: IconComponent, name, index }: SkillCardProps) {
   const [isDragging, setIsDragging] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
@@ -78,18 +77,8 @@ export function SkillCard({ icon: IconComponent, name, level, index }: SkillCard
 
           <div className="space-y-2">
             <div className="flex justify-between items-center">
-              <span className="text-xs font-medium text-slate-400">Proficiency</span>
-              <span className="text-sm font-bold text-purple-400">{level}%</span>
             </div>
-            <motion.div className="h-2 bg-slate-800 rounded-full overflow-hidden">
-              <motion.div
-                className="h-full bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500"
-                initial={{ width: 0 }}
-                whileInView={{ width: `${level}%` }}
-                transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
-                viewport={{ once: true }}
-              />
-            </motion.div>
+
           </div>
         </div>
       </div>

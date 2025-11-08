@@ -21,19 +21,29 @@ export default function ContactSection() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulate form submission
-    setSubmitted(true)
-    setFormState({ name: "", email: "", message: "" })
-    setTimeout(() => setSubmitted(false), 3000)
+    try {
+      const response = await fetch("/api/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      })
+      if (response.ok) {
+        setSubmitted(true)
+        setFormState({ name: "", email: "", message: "" })
+        setTimeout(() => setSubmitted(false), 3000)
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+    }
   }
 
   const socialLinks = [
     {
       name: "Email",
       icon: Mail,
-      href: "mailto:rathodvaibhav401@gmail.com",
+      href: "mailto:vaibhav@example.com",
     },
     {
       name: "GitHub",
@@ -43,7 +53,12 @@ export default function ContactSection() {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/vaibhav-rathod-1620a1233",
+      href: "https://linkedin.com/in/vaibhav-rm",
+    },
+    {
+      name: "Twitter",
+      icon: Twitter,
+      href: "https://twitter.com/vaibhav_rm",
     },
   ]
 
@@ -159,14 +174,22 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              {/* Download CV */}
-              <div className="glass-card p-6 space-y-4">
-                <h4 className="font-bold text-lg">Download My Resume</h4>
-                <p className="text-foreground/70 text-sm">Get a detailed look at my experience and skills</p>
-                <button className="w-full px-4 py-2 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 smooth-transition">
-                  Download CV
-                </button>
-              </div>
+{/* Download CV */}
+<div className="glass-card p-6 space-y-4">
+  <h4 className="font-bold text-lg">Download My Resume</h4>
+  <p className="text-foreground/70 text-sm">Get a detailed look at my experience and skills</p>
+  
+  <a
+    href="/Vaibhav_Rathod_Resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    download
+    className="w-full block text-center px-4 py-2 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 smooth-transition"
+  >
+    Open / Download Resume
+  </a>
+</div>
+
             </motion.div>
           </motion.div>
 
@@ -175,7 +198,7 @@ export default function ContactSection() {
             variants={itemVariants}
             className="border-t border-border pt-8 text-center text-foreground/60 text-sm"
           >
-            <p>© 2025 Vaibhav Rathod. Designed & built with React, Tailwind & Framer Motion.</p>
+            <p>© 2025 Vaibhav Rathod. Designed & built with Next JS, Tailwind & Framer Motion.</p>
           </motion.div>
         </motion.div>
       </div>
