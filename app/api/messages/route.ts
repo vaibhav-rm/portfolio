@@ -2,6 +2,7 @@ import { writeFile, readFile } from "fs/promises"
 import { join } from "path"
 import { type NextRequest, NextResponse } from "next/server"
 
+export const dynamic = 'force-static'
 const messagesFile = join(process.cwd(), "public", "messages.json")
 
 interface Message {
